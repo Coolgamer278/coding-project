@@ -1,26 +1,23 @@
 import random
 
 print("Welcome to Guess the Number!")
-print("I'm thinking of a number between 1 and 100.")
+print("I'm thinking of a number between 1 and 10.")
 
-# Generate a random number
-number_to_guess = random.randint(1, 100)
+number_to_guess = random.randint(1,10)
 
 attempts = 0
 guess = 0
 
-# Loop until user guesses correctly
 while guess != number_to_guess:
     try:
         guess = int(input("Enter your guess: "))
-        attempts += 1
 
         if guess < number_to_guess:
-            print("Too low! Try again.")
+            print("Too low")
         elif guess > number_to_guess:
-            print("Too high! Try again.")
+            print("Too high")
         else:
-            print(f"🎉 Correct! The number was {number_to_guess}.")
-            print(f"You guessed it in {attempts} attempts!")
+            print("🐟Correct🐟")
     except ValueError:
         print("Please enter a valid number.")
+        
